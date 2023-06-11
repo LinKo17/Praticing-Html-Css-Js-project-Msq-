@@ -59,3 +59,24 @@ margin:0 auto;
 .spanDivFromInnerParentDiv{
     font-family: sans-serif;
 }
+@media (max-width:1000px){
+    .shopping_List_Inner{
+        width:50%;
+    }
+}
+@media(max-width:700px){
+    /* body{
+        background-color: red;
+    } */
+    .shopping_List_Inner{
+        width:68%;
+    }
+}
+@media (max-width:500px){
+    /* body{
+        background-color: green;
+    } */
+    .shopping_List_Inner{
+        width:78%;
+    }
+}

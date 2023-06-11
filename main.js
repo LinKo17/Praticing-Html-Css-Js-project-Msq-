@@ -89,3 +89,32 @@ function showOverlay(){
 ResMain.appendChild(innerResMain);
 
 //theme change
+let themeChanger = document.getElementsByClassName("theme_Changer")[0];
+let bodyTag = document.getElementsByTagName("body")[0];
+
+if(localStorage.getItem("themer")==="dark"){
+
+    bodyTag.classList.add("theme");
+    themeChanger.src="sun.png";
+    
+}else if(localStorage.getItem("themer")==="light"){
+
+    bodyTag.classList.remove("theme");
+    themeChanger.src ="moon.png";
+}
+
+themeChanger.addEventListener("click",()=>{
+
+    if(bodyTag.classList.contains("theme")){
+        bodyTag.classList.remove("theme");
+        themeChanger.src ="moon.png";
+        localStorage.setItem("themer","light");
+    }else{
+        bodyTag.classList.add("theme");
+        themeChanger.src="sun.png";
+        localStorage.setItem("themer","dark");
+
+
+    }
+})
+
