@@ -1,6 +1,7 @@
 body{
     padding: 0px;
     margin: 0px;
+    background-color: var(--thirdary-color);
 }
 .header{
     /* background-color: yellow; */
@@ -10,10 +11,15 @@ body{
 :root{
     --primary-color:green;
     --secondary-color:black;
+    --thirdary-color:white;
+    /* --primary-color:gold;
+    --secondary-color:white;
+    --thirdary-color:black; */
 }
 .theme{
     --primary-color:gold;
     --secondary-color:white;
+    --thirdary-color:black;
 }
 .header_Inner_Div{
     /* background-color: blue; */
