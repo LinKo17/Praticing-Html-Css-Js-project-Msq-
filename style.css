@@ -9,7 +9,7 @@ body{
     height:60px;
 }
 :root{
-    --primary-color:green;
+    --primary-color:#001d3d;
     --secondary-color:black;
     --thirdary-color:white;
     --fourth-color:gold;
@@ -21,7 +21,7 @@ body{
     --primary-color:gold;
     --secondary-color:white;
     --thirdary-color:black;
-    --fourth-color:green;
+    --fourth-color:#001d3d;
     
 }
 .header_Inner_Div{
