@@ -1,0 +1,104 @@
+.Toast_alert_LS{
+    width:100%;
+    height: 100vh;
+    /* background-color: green; */
+}
+.Inner_toast_alert_LS{
+    width:100%;
+    height: 100%;
+    /* background-color: blue; */
+    position: relative;
+}
+.main_alert_LS{
+    /* background-color: red; */
+    width:100%;
+    height: 100%;
+}
+.mini_alert_LS{
+    /* background-color: blueviolet; */
+    width:100%;
+    position: absolute;
+    bottom:0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.innerMiniAlertLSDiv{
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    width:30%;
+    display: flex;
+    justify-content: space-between;
+    color:var(--fourth-color);
+    padding:7px;
+    position: relative;
+    transition: all 0.6s;
+}
+.textDivFromLS{
+    font-family: sans-serif;
+    font-size:16px;
+    color:var(--fourth-color);
+    padding:10px;
+    user-select: none;
+}
+.btnFromLS{
+    background-color:var(--fourth-color);
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 16px;
+    padding:8px;
+    border-radius: 3px;
+    color:var(--primary-color);
+    user-select: none;
+
+}
+@media (max-width:1200px){
+    .innerMiniAlertLSDiv{
+        width:39%;
+    }
+
+}
+@media (max-width:1080px){
+    .innerMiniAlertLSDiv{
+        width:44%;
+    }
+}
+@media (max-width:900px){
+    .innerMiniAlertLSDiv{
+        width:47%;
+    }
+}
+@media (max-width:800px){
+    .innerMiniAlertLSDiv{
+        width:54%;
+    }
+}
+@media (max-width:700px){
+    .innerMiniAlertLSDiv{
+        width:62%;
+    }
+}
+@media (max-width:620px){
+    .innerMiniAlertLSDiv{
+        width:67%;
+     
+    }
+}
+@media (max-width:570px){
+    .innerMiniAlertLSDiv{
+        width:72%;
+        
+    }
+}
+@media (max-width:540px){
+    .innerMiniAlertLSDiv{
+        width:77%;
+        
+    }
+}
+@media (max-width:500px){
+    .innerMiniAlertLSDiv{
+        width:87%;
+        
+    }
+}
