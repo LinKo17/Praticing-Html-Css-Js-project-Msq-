@@ -1,0 +1,54 @@
+.toast_alert{
+    /* background-color: red; */
+    width:100%;
+    height: 100vh;
+} /*to move*/
+
+.Inner_toast_alert{
+    /* background-color: green; */
+    width:100%;
+    height: 100%;
+    position:relative;
+}/*to give position*/
+.main_Alert_Div{
+    /* background-color: blue; */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mini_Alert_Div{
+    /* background-color: aqua; */
+    width: 100%;
+    position: absolute;
+    bottom:0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.btn_From_Toast{
+    padding:10px 15px;
+    font-size:17px;
+    font-family: monospace;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    border:none;
+    color:var( --fourth-color);
+    border-radius: 10px;
+}
+.btn_From_Toast:hover{
+    background-color: var(--fourth-color);
+    color:var(--primary-color);
+}
+.miniAlertToastInnerDiv{
+    background-color: var(--primary-color);
+    /* width:50%; */
+    font-size: 15px;
+    font-family: monospace;
+    padding:10px 10px;
+    border-radius: 5px;
+    position: relative;
+    transition: all 0.8s;
+    color:var(--fourth-color);
+}
