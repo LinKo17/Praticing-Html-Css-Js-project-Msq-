@@ -40,12 +40,13 @@ hamburgerBox.addEventListener("click",()=>{
         burgerline3.classList.remove("minus45deg");
 
         setTimeout(()=>{
-            innerResMini.style.left = "-400px";
+            let innerCourt = innerResMini.offsetLeft+innerResMini.offsetWidth;
+            innerResMini.style.left = "-"+innerCourt+"px";
         },500)
         setTimeout(()=>{
             innerResMain.classList.remove("innerResMain");
             innerResMain.innerHTML="";
-        },900)
+        },1000)
        
     }else{
         hamburgerBox.classList.add("checking");
@@ -78,8 +79,9 @@ function showOverlay(){
         innerResMini.appendChild(unOrderListForRes);
     }
 
-    innerResMini.style.left = "-400px";
-
+    // let taking = innerResMini.offsetLeft+innerResMini.offsetWidth+"px";
+    // innerResMini.style.left =`-${taking}`;
+    innerResMini.style.left = "-1000px";
     setTimeout(()=>{
         innerResMini.style.left = "0px";
     },1000)
