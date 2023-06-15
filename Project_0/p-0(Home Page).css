@@ -1,12 +1,13 @@
 .home_Page{
     /* background-color: aquamarine; */
     width:100%;
-    height: 100vh;
+    height: 90vh;
+    margin:0px;
 }
 .Inner_home_Page{
     /* background-color: red; */
     width:100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;

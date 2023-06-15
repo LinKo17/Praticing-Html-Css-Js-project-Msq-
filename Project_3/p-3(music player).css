@@ -1,12 +1,13 @@
 .music_Player{
     /* background-color: yellowgreen; */
     width:100%;
-    height: 100vh;
+    height: 90vh;
+    display: none;
 }
 .music_Player_Inner{
     /* background-color: aliceblue; */
     width:100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;

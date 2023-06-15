@@ -1,7 +1,8 @@
 .Img_move{
     /* background-color: red; */
     width:100%;
-    height:100vh;
+    height:90vh;
+    display: none;
 }
 .img_Box_Img_Move{
     width:75%;

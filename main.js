@@ -2,8 +2,125 @@
 let unOrderList =document.getElementsByClassName("unOrderList")[0];
 let sliderTag = document.getElementsByClassName("slider")[0];
 
+//each page title
+let homepage = document.getElementsByClassName("home_Page")[0];
+let shoppingpage = document.getElementsByClassName("shopping_List")[0];
+let stopWatchPage = document.getElementsByClassName("stop_Watch")[0];
+let musicplayerpage = document.getElementsByClassName("music_Player")[0];
+let autoCompletePage = document.getElementsByClassName("auto_Complete")[0];
+let toastalertPage   = document.getElementsByClassName("toast_alert")[0];
+let toastalertLSPage = document.getElementsByClassName("Toast_alert_LS")[0];
+let imagemovePage    = document.getElementsByClassName("Img_move")[0];
+let sortPage = document.getElementsByClassName("sort_Section")[0];
+
 let tabs=["project-1","project-2","project-3","project-4","project-5","project-6","project-7","project-8","project-9"];
 
+let switchingFunction =(adding)=>{
+
+    switch(adding){
+        case "0":
+            homepage.style.display             ="block";
+            shoppingpage.style.display         ="none";
+            stopWatchPage.style.display        ="none";
+            musicplayerpage.style.display      ="none";
+            autoCompletePage.style.display     ="none";
+            toastalertPage.style.display       ="none";
+            toastalertLSPage.style.display     ="none";
+            imagemovePage.style.display        ="none";
+            sortPage.style.display             ="none";
+        break;
+        case "1":
+            homepage.style.display             ="none";
+            shoppingpage.style.display         ="block";
+            stopWatchPage.style.display        ="none";
+            musicplayerpage.style.display      ="none";
+            autoCompletePage.style.display     ="none";
+            toastalertPage.style.display       ="none";
+            toastalertLSPage.style.display     ="none";
+            imagemovePage.style.display        ="none";
+            sortPage.style.display             ="none";
+        break;
+        case "2":
+            homepage.style.display             ="none";
+            shoppingpage.style.display         ="none";
+            stopWatchPage.style.display        ="block";
+            musicplayerpage.style.display      ="none";
+            autoCompletePage.style.display     ="none";
+            toastalertPage.style.display       ="none";
+            toastalertLSPage.style.display     ="none";
+            imagemovePage.style.display        ="none";
+            sortPage.style.display             ="none";
+        break;
+        case "3":
+            homepage.style.display             ="none";
+            shoppingpage.style.display         ="none";
+            stopWatchPage.style.display        ="none";
+            musicplayerpage.style.display      ="block";
+            autoCompletePage.style.display     ="none";
+            toastalertPage.style.display       ="none";
+            toastalertLSPage.style.display     ="none";
+            imagemovePage.style.display        ="none";
+            sortPage.style.display             ="none";
+        break;
+        case "4":
+            homepage.style.display             ="none";
+            shoppingpage.style.display         ="none";
+            stopWatchPage.style.display        ="none";
+            musicplayerpage.style.display      ="none";
+            autoCompletePage.style.display     ="block";
+            toastalertPage.style.display       ="none";
+            toastalertLSPage.style.display     ="none";
+            imagemovePage.style.display        ="none";
+            sortPage.style.display             ="none";
+        break;
+        case "5":
+            homepage.style.display             ="none";
+            shoppingpage.style.display         ="none";
+            stopWatchPage.style.display        ="none";
+            musicplayerpage.style.display      ="none";
+            autoCompletePage.style.display     ="none";
+            toastalertPage.style.display       ="block";
+            toastalertLSPage.style.display     ="none";
+            imagemovePage.style.display        ="none";
+            sortPage.style.display             ="none";
+        break;
+        case "6":
+            homepage.style.display             ="none";
+            shoppingpage.style.display         ="none";
+            stopWatchPage.style.display        ="none";
+            musicplayerpage.style.display      ="none";
+            autoCompletePage.style.display     ="none";
+            toastalertPage.style.display       ="none";
+            toastalertLSPage.style.display     ="block";
+            imagemovePage.style.display        ="none";
+            sortPage.style.display             ="none";
+        break;
+        case "7":
+            homepage.style.display             ="none";
+            shoppingpage.style.display         ="none";
+            stopWatchPage.style.display        ="none";
+            musicplayerpage.style.display      ="none";
+            autoCompletePage.style.display     ="none";
+            toastalertPage.style.display       ="none";
+            toastalertLSPage.style.display     ="none";
+            imagemovePage.style.display        ="block";
+            sortPage.style.display             ="none";
+        break;
+        case "8":
+            homepage.style.display             ="none";
+            shoppingpage.style.display         ="none";
+            stopWatchPage.style.display        ="none";
+            musicplayerpage.style.display      ="none";
+            autoCompletePage.style.display     ="none";
+            toastalertPage.style.display       ="none";
+            toastalertLSPage.style.display     ="none";
+            imagemovePage.style.display        ="none";
+            sortPage.style.display             ="block";
+        break;
+
+
+    }
+}
 for(let i=0; i<tabs.length; i++){
     let listItem = document.createElement("li");
     listItem.classList.add("listItem");
@@ -22,6 +139,11 @@ for(let i=0; i<tabs.length; i++){
 
         sliderTag.style.width = idForUsInJs.offsetWidth+"px";
         sliderTag.style.transform = `translate(${idForUsInJs.offsetLeft+"px"})`;
+
+        switchingFunction(idTaker);
+
+
+
     })
 
 }
@@ -69,14 +191,27 @@ function showOverlay(){
     for(let x=0; x<tabs.length; x++){
         let unOrderListForRes = document.createElement("ul");
         unOrderListForRes.classList.add("unOrderListForRes");
+        // unOrderListForRes.id =x;
+       
 
         let listItemForRes = document.createElement("li");
         listItemForRes.classList.add("listItemForRes");
         listItemForRes.id =x;
+        
         listItemForRes.appendChild(document.createTextNode(tabs[x]));
 
         unOrderListForRes.appendChild(listItemForRes);
         innerResMini.appendChild(unOrderListForRes);
+
+        listItemForRes.addEventListener("click",(event)=>{
+            let hamburgertaker = event.target.id;
+
+            switchingFunction(hamburgertaker);
+        })
+        // unOrderListForRes.addEventListener("click",(event)=>{
+        //     console.log("ul"+event.target.id)
+        // })
+
     }
 
     // let taking = innerResMini.offsetLeft+innerResMini.offsetWidth+"px";
@@ -84,7 +219,7 @@ function showOverlay(){
     innerResMini.style.left = "-1000px";
     setTimeout(()=>{
         innerResMini.style.left = "0px";
-    },1000)
+    },600)
 
     innerResMain.appendChild(innerResMini);
 }

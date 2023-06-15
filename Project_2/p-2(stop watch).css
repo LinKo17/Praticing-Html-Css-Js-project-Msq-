@@ -1,8 +1,9 @@
 .stop_Watch{
     width:100%;
-    height:100vh;
+    height:90vh;
     padding-top:50px;
     box-sizing: border-box;
+    display: none;
 }
 .stop_Watch_Inner{
     /* background-color: blue; */

@@ -1,7 +1,8 @@
 .toast_alert{
     /* background-color: red; */
     width:100%;
-    height: 100vh;
+    height: 90vh;
+    display: none;
 } /*to move*/
 
 .Inner_toast_alert{
@@ -13,7 +14,7 @@
 .main_Alert_Div{
     /* background-color: blue; */
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
